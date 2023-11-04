@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "serviceImage": "https://i.ibb.co/HrrSZRJ/Denim-Jeans.jpg",
+        "serviceName": "Denim & Jeans",
+        "serviceDescription": "Trendy denim and jeans for all occasions. Get the perfect fit.",
+        "providerImage": "https://i.ibb.co/gJYmtSb/p2.jpg",
+        "providerName": " Leo Harrison",
+        "servicePrice": "$50.00"
+    },
+    {
+        "id": 2,
+        "serviceImage": "https://i.ibb.co/526vNtm/T-Shirts-Tops.jpg",
+        "serviceName": "T-Shirts & Tops",
+        "serviceDescription": "Stylish t-shirts and tops in various designs. Stay fashionable!",
+        "providerImage": "https://i.ibb.co/Sr4tVhr/p3.jpg",
+        "providerName": "pelix parker",
+        "servicePrice": "$75.00"
+    },
+    {
+        "id": 3,
+        "serviceImage": "https://i.ibb.co/KKFnDQF/Pet-Clothing.jpg",
+        "serviceName": "Pet Clothing",
+        "serviceDescription": "Adorable pet clothing for your furry friends. Keep them stylish.",
+        "providerImage": "https://i.ibb.co/X5cGfzB/p4.jpg",
+        "providerName": "Silas turner",
+        "servicePrice": "$40.00"
+    },
+    {
+        "id": 4,
+        "serviceImage": "https://i.ibb.co/sb7pKrv/Wedding-Bridal-Wear.jpg",
+        "serviceName": "Wedding & Bridal Wear",
+        "serviceDescription": "Elegant wedding and bridal wear for your special day. Look stunning.",
+        "providerImage": "https://i.ibb.co/3kN7kM6/p5.jpg",
+        "providerName": "Orion mitchel",
+        "servicePrice": "$60.00"
+    }
+]

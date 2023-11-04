@@ -14,7 +14,7 @@ const Navber = () => {
 
     return (
         <div>
-            <div className="flex justify-between items-center mt-2 px-4  rounded-md lg:h-20 md:flex-col lg:flex-row">
+            <div className="flex justify-between items-center mt-2 px-4   rounded-md lg:h-20 md:flex-col lg:flex-row">
                 <h1 className="text-red-500 sm:text-3xl md:text-3xl text-xl font-extrabold">
                     Cloth
                     <span className="text-black sm:text-3xl md:text-3xl text-xl font-serif">

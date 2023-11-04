@@ -1,0 +1,9 @@
+/* PopolerService.css */
+
+.card-container {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-container:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+}
