@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PopolerService from "./PopolerService";
+import Footer from "./Footer";
 
 const Home = () => {
     useEffect(() => {
@@ -39,6 +40,8 @@ const Home = () => {
             </div>
 
             <PopolerService></PopolerService>
+
+            <Footer></Footer>
         </div>
     );
 };
