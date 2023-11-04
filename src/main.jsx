@@ -1,0 +1,69 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import Home from "./Components/Page/Home";
+import MainLayout from "./Components/Layout/MainLayout";
+import NotFound from "./Components/Page/NotFound";
+import AuthProvider from "./Components/Auth/AuthProvider";
+import Login from "./Components/Page/Login";
+import Registration from "./Components/Page/Registration";
+import Service from "./Components/Page/Service";
+
+import MyService from "./Components/DashBaord/MyService";
+import AddService from "./Components/DashBaord/AddService";
+import MySchedules from "./Components/DashBaord/MySchedules";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <MainLayout></MainLayout>,
+        children: [
+            {
+                path: "/",
+                element: <Home></Home>,
+            },
+            {
+                path: "Login",
+                element: <Login></Login>,
+            },
+            {
+                path: "Registration",
+                element: <Registration></Registration>,
+            },
+            {
+                path: "service",
+                element: <Service></Service>,
+            },
+
+            {
+                path: "my-services",
+                element: <MyService></MyService>,
+            },
+            {
+                path: "add-services",
+                element: <AddService></AddService>,
+            },
+            {
+                path: "my-schedules",
+                element: <MySchedules></MySchedules>,
+            },
+
+            {
+                path: "*",
+                element: <NotFound></NotFound>,
+            },
+        ],
+    },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+        <AuthProvider>
+            {" "}
+            <RouterProvider router={router} />
+        </AuthProvider>
+    </React.StrictMode>
+);
