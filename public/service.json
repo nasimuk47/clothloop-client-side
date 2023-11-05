@@ -1,0 +1,302 @@
+[
+    
+    {
+       
+        "ServiceImage": "https://i.ibb.co/vVjHrrT/panjabi-24.jpg",
+        "ServiceName": "Panjabi",
+        "ServiceDescription": "Professional car washing service.",
+        "ServiceProviderImage": "https://i.ibb.co/gF6Y9Rd/c1.jpg",
+        "ServiceProviderName": "John Blinken",
+        "ServiceArea": "Downtown",
+        "ServicePrice": 19.99
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/vY7DHPv/panjabi26.jpg",
+        "ServiceName": "Panjabi",
+        "ServiceDescription": "Daily dog walking for your pets.",
+        "ServiceProviderImage": "https://i.ibb.co/vLKj5gV/c2.jpg",
+        "ServiceProviderName": "Almighty Netro",
+        "ServiceArea": "Suburbs",
+        "ServicePrice": 15.50
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/NtGzPdz/panjabi27.jpg",
+        "ServiceName": "Panjabi",
+        "ServiceDescription": "Fast and reliable computer repair service.",
+        "ServiceProviderImage": "https://i.ibb.co/nChKhzc/c3.jpg",
+        "ServiceProviderName": "Mixisa Nistu",
+        "ServiceArea": "Citywide",
+        "ServicePrice": 49.99
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/hD1fHyt/panjabi28.jpg",
+        "ServiceName": "Panjabi",
+        "ServiceDescription": "One-on-one tutoring for all subjects.",
+        "ServiceProviderImage": "https://i.ibb.co/VLk5scy/c4.jpg",
+        "ServiceProviderName": "Delini Soss",
+        "ServiceArea": "Local",
+        "ServicePrice": 30.00
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/0cjb3yp/panjabi29.jpg",
+        "ServiceName": "Panjabi",
+        "ServiceDescription": "Expert gardening and landscaping services.",
+        "ServiceProviderImage": "https://i.ibb.co/tLB7YST/c5.jpg",
+        "ServiceProviderName": "Akssher Lek",
+        "ServiceArea": "Rural",
+        "ServicePrice": 45.75
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/y4NcTDm/panjabi30.jpg",
+        "ServiceName": "Panjabi",
+        "ServiceDescription": "High-quality house painting service.",
+        "ServiceProviderImage": "https://i.ibb.co/ScCCZv7/c6.jpg",
+        "ServiceProviderName": "ColorSplash Painters",
+        "ServiceArea": "Suburbs",
+        "ServicePrice": 99.00
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/W37zXwn/t-sirt16.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Custom t-shirt printing service with a wide range of designs and colors to express your style.",
+        "ServiceProviderImage": "https://i.ibb.co/bRfGdG8/c7.jpg",
+        "ServiceProviderName": "QuickFix Printing",
+        "ServiceArea": "Countywide",
+        "ServicePrice": 19.99
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/GkBbpcg/t-sirt15.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Professional mobile app development services tailored to your needs.",
+        "ServiceProviderImage": "https://i.ibb.co/PjkXt1N/c8.jpg",
+        "ServiceProviderName": "AppGenius Solutions",
+        "ServiceArea": "Global",
+        "ServicePrice": 199.99
+      },
+      {
+                "ServiceImage": "https://i.ibb.co/ZfgdmSy/t-sirt14.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Delicious catering for events, parties, and special occasions.",
+        "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
+        "ServiceProviderName": "TasteBuds Catering",
+        "ServiceArea": "Citywide",
+        "ServicePrice": 120.50
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/7rKpdVL/t-sirt13.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Electrical repair and installation services by experienced professionals.",
+        "ServiceProviderImage": "https://i.ibb.co/Hq7pvS5/c10.jpg",
+        "ServiceProviderName": "ElectroFix Services",
+        "ServiceArea": "Local",
+        "ServicePrice": 55.25
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/CHr3k3M/t-sirt12.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Relaxing massage therapy to rejuvenate your body and mind.",
+        "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+        "ServiceProviderName": "Serenity Spa",
+        "ServiceArea": "Downtown",
+        "ServicePrice": 75.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/VJwzzxP/t-sirt11.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Comprehensive car repair and maintenance services to keep your vehicle in top shape.",
+        "ServiceProviderImage": "https://i.ibb.co/Qc6sbqZ/c13.jpg",
+        "ServiceProviderName": "AutoCare Solutions",
+        "ServiceArea": "City Center",
+        "ServicePrice": 85.99
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/sv2n5DC/t-sirt10.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Yoga classes suitable for beginners and experts, promoting physical and mental well-being.",
+        "ServiceProviderImage": "https://i.ibb.co/93h2ZMT/c15.jpg",
+        "ServiceProviderName": "Zen Harmony Yoga",
+        "ServiceArea": "Suburbs",
+        "ServicePrice": 20.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/d0Rrspx/t-sirt9.jpg",
+        "ServiceName": "T-Shirt",
+        "ServiceDescription": "Expert home renovation services to transform your living space into your dream home.",
+        "ServiceProviderImage": "https://i.ibb.co/zZwtPz4/c18.jpg",
+        "ServiceProviderName": "RenovateRight Contractors",
+        "ServiceArea": "Local",
+        "ServicePrice": 150.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/sRyh49Y/denim-an-d-jens-1.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Capture your special moments with professional photography services for events and occasions.",
+        "ServiceProviderImage": "https://i.ibb.co/PjkXt1N/c8.jpg",
+        "ServiceProviderName": "CaptureMoments Photography",
+        "ServiceArea": "Countywide",
+        "ServicePrice": 80.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/0JRqYrH/denim-an-d-jens-7.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Achieve your fitness goals with personalized training programs and expert guidance.",
+        "ServiceProviderImage": "https://i.ibb.co/gF6Y9Rd/c1.jpg",
+        "ServiceProviderName": "FitLife Trainers",
+        "ServiceArea": "Citywide",
+        "ServicePrice": 40.50
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/7rRtF6Z/denim-an-d-jens.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Create quality carpentry projects with skilled carpentry services tailored to your needs.",
+        "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+        "ServiceProviderName": "Craftsmen Carpentry",
+        "ServiceArea": "Rural",
+        "ServicePrice": 60.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/WVLztG0/denim-and-jens.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Plan and execute memorable events with professional event planning services.",
+        "ServiceProviderImage": "https://i.ibb.co/zZwtPz4/c18.jpg",
+        "ServiceProviderName": "Dream Events Planners",
+        "ServiceArea": "Suburbs",
+        "ServicePrice": 90.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/vXHRRqN/denim-anmd-jens.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Enhance your projects with creative graphic design that stands out from the rest.",
+        "ServiceProviderImage": "https://i.ibb.co/7ttyrbZ/shirt24.jpg",
+        "ServiceProviderName": "DesignCraft Studios",
+        "ServiceArea": "City Center",
+        "ServicePrice": 55.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/LdnWdB9/jeans.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Receive expert legal advice and consultation to address your legal matters effectively.",
+        "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+        "ServiceProviderName": "LegalEase Advisors",
+        "ServiceArea": "Downtown",
+        "ServicePrice": 120.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/LdnWdB9/jeans.jpg",
+        "ServiceName": "Denim jeans",
+        "ServiceDescription": "Transform your living or working space with our professional interior design services.",
+        "ServiceProviderImage": "https://i.ibb.co/zZwtPz4/c18.jpg",
+        "ServiceProviderName": "Elegance Interiors",
+        "ServiceArea": "Local",
+        "ServicePrice": 75.00
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/V9cqvZ2/pet19.jpg",
+        "ServiceName": "Pet Cloth",
+        "ServiceDescription": "Delicious catering for events and parties.",
+        "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
+        "ServiceProviderName": "TasteBuds Catering",
+        "ServiceArea": "Citywide",
+        "ServicePrice": 120.50
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/9yLZkR5/pet21.jpg",
+        "ServiceName": "Pet Cloth",
+        "ServiceDescription": "Electrical repair and installation services.",
+        "ServiceProviderImage": "https://i.ibb.co/Hq7pvS5/c10.jpg",
+        "ServiceProviderName": "ElectroFix Services",
+        "ServiceArea": "Local",
+        "ServicePrice": 55.25
+      },
+      {
+        
+        "ServiceImage": "https://i.ibb.co/0ftkqk3/pet1920.jpg",
+        "ServiceName": "Pet Cloth",
+        "ServiceDescription": "Relaxing massage therapy for body and mind.",
+        "ServiceProviderImage": "https://i.ibb.co/93h2ZMT/c15.jpg",
+        "ServiceProviderName": "Serenity Spa",
+        "ServiceArea": "Downtown",
+        "ServicePrice": 75.00
+       },
+       {
+      
+      "ServiceImage": "https://i.ibb.co/DWJ58ZW/pet-1.jpg",
+      "ServiceName": "pet cloth",
+      "ServiceDescription": "Car repair and maintenance services.",
+     
+      "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+      "ServiceProviderName": "AutoCare Solutions",
+      "ServiceArea": "City Center",
+      "ServicePrice": 85.99
+     },
+    {
+      
+      "ServiceImage": "https://i.ibb.co/7rRtF6Z/denim-an-d-jens.jpg",
+      "ServiceName": "Shirt",
+      "ServiceDescription": "Yoga classes for beginners and experts.",
+     
+      "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
+      "ServiceProviderName": "Zen Harmony Yoga",
+      "ServiceArea": "Suburbs",
+      "ServicePrice": 20.00
+    },
+    {
+      
+      "ServiceImage": "https://i.ibb.co/Pw4yRtR/shirt22.jpg",
+      "ServiceName": "Shirt",
+      "ServiceDescription": "Renovate your home with our expert team.",
+     
+      "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
+      "ServiceProviderName": "RenovateRight Contractors",
+      "ServiceArea": "Local",
+      "ServicePrice": 150.00
+    },
+    {
+      
+      "ServiceImage": "https://i.ibb.co/CHr3k3M/t-sirt12.jpg",
+      "ServiceName": "Shirt",
+      "ServiceDescription": "Professional photography services for events.",
+     
+      "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+      "ServiceProviderName": "CaptureMoments Photography",
+      "ServiceArea": "Countywide",
+      "ServicePrice": 80.00
+    },
+    {
+      
+      "ServiceImage": "https://i.ibb.co/7ttyrbZ/shirt24.jpg",
+      "ServiceName": "Shirt",
+      "ServiceDescription": "Get fit with personalized training programs.",
+     
+      "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+      "ServiceProviderName": "FitLife Trainers",
+      "ServiceArea": "Citywide",
+      "ServicePrice": 40.50
+    },
+    {
+      
+      "ServiceImage": "https://i.ibb.co/HPsztGb/shirt23.jpg",
+      "ServiceName": "Shirt",
+      "ServiceDescription": "Skilled carpentry services for your projects.",
+     
+      "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
+      "ServiceProviderName": "Craftsmen Carpentry",
+      "ServiceArea": "Rural",
+      "ServicePrice": 60.00
+    }
+  ]
+  
