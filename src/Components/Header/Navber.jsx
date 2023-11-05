@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../Header/Navber.css";
 import { AuthContext } from "../Auth/AuthProvider";
 
@@ -15,12 +15,15 @@ const Navber = () => {
     return (
         <div>
             <div className="flex justify-between items-center mt-2 px-4   rounded-md lg:h-20 md:flex-col lg:flex-row">
-                <h1 className="text-red-500 sm:text-3xl md:text-3xl text-xl font-extrabold">
-                    Cloth
-                    <span className="text-black sm:text-3xl md:text-3xl text-xl font-serif">
-                        Loop
-                    </span>
-                </h1>
+                <Link to="/">
+                    {" "}
+                    <h1 className="text-red-500 sm:text-3xl md:text-3xl text-xl font-extrabold">
+                        Cloth
+                        <span className="text-black sm:text-3xl md:text-3xl text-xl font-serif">
+                            Loop
+                        </span>
+                    </h1>
+                </Link>
                 <nav>
                     <ul className="flex gap-4">
                         <li>
@@ -41,7 +44,7 @@ const Navber = () => {
                                     Dashboard
                                 </a>
                                 {showDashboardMenu && (
-                                    <ul className="bg-purple-300 rounded mt-1 p-2 absolute">
+                                    <ul className="bg-purple-300 rounded right-[500px]  -mt-16 p-2  absolute">
                                         <li>
                                             <NavLink
                                                 to="/my-services"

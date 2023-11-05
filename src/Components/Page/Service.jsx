@@ -1,8 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import ServiceDetails from "../Page/ServiceDetails";
 
 const Service = () => {
     const [services, setServices] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [showAllServices, setShowAllServices] = useState(false);
 
     useEffect(() => {
         // Fetch the service data from your server
@@ -16,12 +20,18 @@ const Service = () => {
             });
     }, []);
 
-    const filteredServices = services.filter((service) =>
-        service.ServiceName.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredServices = services
+        .filter((service) =>
+            service.ServiceName.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        .slice(0, showAllServices ? services.length : 6);
 
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
+    };
+
+    const handleShowAllServices = () => {
+        setShowAllServices(true);
     };
 
     return (
@@ -43,32 +53,37 @@ const Service = () => {
                                 value={searchTerm}
                                 onChange={handleSearch}
                             />
-
                             <button className="btn btn-neutral">Search</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <h1 className="text-4xl mt-3 font-bold text-center">
+                Product Overview
+            </h1>
+
             {/* Services card section */}
-            <div className="sm:grid grid-cols-1 lg:grid-cols-4  mt-5 mb-2 ">
+            <div className="sm:grid grid-cols-1 lg:grid-cols-4 mt-5 mb-2">
                 {filteredServices.map((service) => (
                     <div
                         key={service._id}
                         className="w-72 h-[500px] bg-gray-50">
-                        <figure className="">
+                        <figure>
                             <img
                                 src={service.ServiceImage}
                                 alt={service.ServiceName}
-                                className=" w-full h-[280px]"
+                                className="w-full h-[280px]"
                             />
                         </figure>
                         <div className="items-center space-y-2 bg-gray-200 text-center h-[210px]">
-                            <h2 className="text-center font-serif ">
+                            <h2 className="text-center font-serif">
                                 {service.ServiceName}
                             </h2>
-                            <p>{service.ServiceDescription}</p>
-
-                            <div className="flex items-center gap-1 justify-center ">
+                            <p>
+                                {service.ServiceDescription.substring(0, 100)}
+                            </p>
+                            <div className="flex items-center gap-1 justify-center">
                                 <img
                                     src={service.ServiceProviderImage}
                                     alt={service.ServiceProviderName}
@@ -78,20 +93,30 @@ const Service = () => {
                                     {service.ServiceProviderName}
                                 </p>
                             </div>
-
                             <p className="font-sans text-blue-600">
                                 Price: ${service.ServicePrice}
                             </p>
-
                             <div className="text-center">
-                                <button className="btn btn-xs bg-slate-300 mb-1">
-                                    details
-                                </button>
+                                <Link to={`/serviceDetails/${service._id}`}>
+                                    <button className="btn btn-xs bg-slate-300 mb-1">
+                                        Details
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+
+            {!showAllServices && (
+                <div className="text-center mt-4">
+                    <button
+                        className="btn btn-primary"
+                        onClick={handleShowAllServices}>
+                        Show All Services
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
