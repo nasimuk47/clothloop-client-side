@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import PopolerService from "./PopolerService";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     useEffect(() => {
@@ -13,6 +14,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>ClothLoop Fashion</title>
+            </Helmet>
             <div>
                 <div
                     className="hero h-[560px] relative"

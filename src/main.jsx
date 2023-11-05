@@ -12,11 +12,11 @@ import Login from "./Components/Page/Login";
 import Registration from "./Components/Page/Registration";
 import Service from "./Components/Page/Service";
 
-import MyService from "./Components/DashBaord/MyService";
 import AddService from "./Components/DashBaord/AddService";
 import MySchedules from "./Components/DashBaord/MySchedules";
 import ServiceDetails from "./Components/Page/ServiceDetails";
 import PrivateRoute from "./Components/Page/PrivateRoute,";
+import ManageService from "./Components/DashBaord/ManageService";
 
 const router = createBrowserRouter([
     {
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
             {
                 path: "manage-services",
-                element: <MyService></MyService>,
+                element: <ManageService></ManageService>,
             },
             {
                 path: "add-services",

@@ -6,6 +6,9 @@ import { AuthContext } from "../Auth/AuthProvider";
 
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
+import UnderDetailsDervicesCollection from "./UnderDetailsServicesCollection";
+
+import { Helmet } from "react-helmet";
 
 const ServiceDetails = () => {
     const { id } = useParams();
@@ -91,6 +94,9 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>services Details</title>
+            </Helmet>
             <h2 className="text-center text-2xl font-bold">
                 {service.ServiceName}
             </h2>
@@ -189,6 +195,16 @@ const ServiceDetails = () => {
                     </div>
                 </div>
             )}
+
+            <div>
+                <h2 className=" text-3xl font-serif text-center mt-5 ">
+                    Our Another Collection
+                </h2>
+
+                <div>
+                    <UnderDetailsDervicesCollection></UnderDetailsDervicesCollection>
+                </div>
+            </div>
         </div>
     );
 };

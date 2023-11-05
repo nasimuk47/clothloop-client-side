@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import ServiceDetails from "../Page/ServiceDetails";
-import { Helmet } from "react-helmet";
 
-const Service = () => {
+const UnderDetailsDervicesCollection = () => {
     const [services, setServices] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [showAllServices, setShowAllServices] = useState(false);
@@ -32,52 +30,18 @@ const Service = () => {
         })
         .slice(0, showAllServices ? services.length : 6);
 
-    const handleSearch = (event) => {
-        setSearchTerm(event.target.value);
-    };
-
     const handleShowAllServices = () => {
         setShowAllServices(true);
     };
 
     return (
         <div>
-            <Helmet>
-                <title>Cloth services</title>
-            </Helmet>
-            <div
-                className="hero h-[150px] rounded-2xl"
-                style={{
-                    backgroundImage:
-                        "url(https://i.ibb.co/nQwZf9V/service-banner.jpg)",
-                }}>
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <div className="flex items-center gap-1">
-                            <input
-                                type="text"
-                                placeholder="Type service Name ...."
-                                className="input input-bordered input-info w-full max-w-xs text-black"
-                                value={searchTerm}
-                                onChange={handleSearch}
-                            />
-                            <button className="btn btn-neutral">Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h1 className="text-4xl mt-3 font-bold text-center">
-                Product Overview
-            </h1>
-
             {/* Services card section */}
             <div className="sm:grid grid-cols-1 lg:grid-cols-4 mt-5 mb-2">
                 {filteredServices.map((service) => (
                     <div
                         key={service._id}
-                        className="w-72 h-[530px] bg-slate-200">
+                        className="w-72 h-[430px] bg-slate-200">
                         <figure>
                             <img
                                 src={service.ServiceImage}
@@ -85,27 +49,11 @@ const Service = () => {
                                 className="w-full h-[280px]"
                             />
                         </figure>
-                        <div className="items-center space-y-2 bg-gray-200 text-center h-[210px]">
+                        <div className="items-center space-y-2 bg-gray-200 text-center h-[100px]">
                             <h2 className="text-center font-serif">
                                 {service.ServiceName}
                             </h2>
 
-                            <p>
-                                {service.ServiceDescription
-                                    ? service.ServiceDescription.substring(
-                                          0,
-                                          100
-                                      )
-                                    : ""}
-                            </p>
-                            <p>
-                                {service.ServiceDescription
-                                    ? service.ServiceDescription.substring(
-                                          0,
-                                          100
-                                      )
-                                    : ""}
-                            </p>
                             <div className="flex items-center gap-1 justify-center">
                                 <img
                                     src={service.ServiceProviderImage}
@@ -117,10 +65,6 @@ const Service = () => {
                                 </p>
                             </div>
 
-                            <p className="font-sans">
-                                {" "}
-                                Area:{service.ServiceArea}
-                            </p>
                             <p className="font-sans text-blue-600">
                                 Price: ${service.ServicePrice}
                             </p>
@@ -149,4 +93,4 @@ const Service = () => {
     );
 };
 
-export default Service;
+export default UnderDetailsDervicesCollection;
