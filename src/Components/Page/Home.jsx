@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import PopolerService from "./PopolerService";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     useEffect(() => {
@@ -31,9 +32,12 @@ const Home = () => {
                             Unlimited <br /> Clothes
                         </h2>
                         <div data-aos="slide-left">
-                            <button className="btn btn-primary flex justify-end bg-red-500 text-white">
-                                Shop Now
-                            </button>
+                            <Link to="/service">
+                                {" "}
+                                <button className="btn btn-primary flex justify-end bg-red-500 text-white">
+                                    Shop Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

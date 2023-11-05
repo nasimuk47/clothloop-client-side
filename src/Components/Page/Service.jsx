@@ -21,9 +21,14 @@ const Service = () => {
     }, []);
 
     const filteredServices = services
-        .filter((service) =>
-            service.ServiceName.toLowerCase().includes(searchTerm.toLowerCase())
-        )
+        .filter((service) => {
+            if (searchTerm) {
+                return service.ServiceName.toLowerCase().includes(
+                    searchTerm.toLowerCase()
+                );
+            }
+            return true;
+        })
         .slice(0, showAllServices ? services.length : 6);
 
     const handleSearch = (event) => {
@@ -68,7 +73,7 @@ const Service = () => {
                 {filteredServices.map((service) => (
                     <div
                         key={service._id}
-                        className="w-72 h-[500px] bg-gray-50">
+                        className="w-72 h-[530px] bg-slate-200">
                         <figure>
                             <img
                                 src={service.ServiceImage}
@@ -80,8 +85,22 @@ const Service = () => {
                             <h2 className="text-center font-serif">
                                 {service.ServiceName}
                             </h2>
+
                             <p>
-                                {service.ServiceDescription.substring(0, 100)}
+                                {service.ServiceDescription
+                                    ? service.ServiceDescription.substring(
+                                          0,
+                                          100
+                                      )
+                                    : ""}
+                            </p>
+                            <p>
+                                {service.ServiceDescription
+                                    ? service.ServiceDescription.substring(
+                                          0,
+                                          100
+                                      )
+                                    : ""}
                             </p>
                             <div className="flex items-center gap-1 justify-center">
                                 <img
@@ -93,6 +112,11 @@ const Service = () => {
                                     {service.ServiceProviderName}
                                 </p>
                             </div>
+
+                            <p className="font-sans">
+                                {" "}
+                                Area:{service.ServiceArea}
+                            </p>
                             <p className="font-sans text-blue-600">
                                 Price: ${service.ServicePrice}
                             </p>

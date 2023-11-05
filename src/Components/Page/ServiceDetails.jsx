@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import "daisyui/dist/full.css"; // Import DaisyUI styles
+import "daisyui/dist/full.css";
 import { AuthContext } from "../Auth/AuthProvider";
 
 import Swal from "sweetalert2";

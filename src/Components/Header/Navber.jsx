@@ -47,9 +47,9 @@ const Navber = () => {
                                     <ul className="bg-purple-300 rounded right-[500px]  -mt-16 p-2  absolute">
                                         <li>
                                             <NavLink
-                                                to="/my-services"
+                                                to="/manage-services"
                                                 activeClassName="text-red-500 underline">
-                                                My-services
+                                                Manage-services
                                             </NavLink>
                                         </li>
                                         <li>
@@ -89,7 +89,7 @@ const Navber = () => {
                                 className="h-10 rounded-full"
                             />
                             <span className="text-red-500 underline user-email">
-                                {user.email}
+                                {user.displayName}
                             </span>
                             <button
                                 onClick={logOut}
