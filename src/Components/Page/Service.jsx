@@ -43,7 +43,7 @@ const Service = () => {
     return (
         <div>
             <Helmet>
-                <title>Cloth services</title>
+                <title>ClothLopp | services</title>
             </Helmet>
             <div
                 className="hero h-[150px] rounded-2xl"

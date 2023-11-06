@@ -89,7 +89,7 @@ const Navber = () => {
                                 className="h-10 rounded-full"
                             />
                             <span className="text-red-500 underline user-email">
-                                {user.displayName}
+                                {user?.displayName}
                             </span>
                             <button
                                 onClick={logOut}

@@ -15,13 +15,13 @@ const AddService = () => {
         const form = event.target;
 
         const ServiceName = form.serviceName.value;
-        const ServiceProviderName = user.displayName;
-        const Email = user.email;
+        const ServiceProviderName = user?.displayName;
+        const Email = user?.email;
         const ServicePrice = form.price.value;
         const ServiceArea = form.serviceArea.value;
         const ServiceDescription = form.description.value;
         const ServiceImage = form.photoUrl.value;
-        const ServiceProviderImage = user.photoURL;
+        const ServiceProviderImage = user?.photoURL;
 
         const newService = {
             ServiceName,
@@ -70,7 +70,7 @@ const AddService = () => {
     return (
         <div>
             <Helmet>
-                <title>Add new Service</title>
+                <title>Clothloop | Add Service</title>
             </Helmet>
             <div className="bg-[#F4F3F0] p-4 sm:p-8 lg:p-24 w-full sm:w-10/12 mx-auto">
                 <h2 className="text-3xl font-extrabold text-center mb-5">

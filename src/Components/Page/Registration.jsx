@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.css";
 import { AuthContext } from "../Auth/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Registration = () => {
     const { createUser, signInUser, signInWithGoogle } =
@@ -92,6 +93,9 @@ const Registration = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>ClothLoop | Registration</title>
+            </Helmet>
             <div className="mt-16">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

@@ -4,7 +4,7 @@ const MySchedules = () => {
     return (
         <div>
             <Helmet>
-                <title>MySchedules</title>
+                <title>ClothLopp | MySchedules</title>
             </Helmet>
 
             <h2>this nnis mt shedules</h2>

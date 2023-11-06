@@ -95,7 +95,7 @@ const ServiceDetails = () => {
     return (
         <div>
             <Helmet>
-                <title>services Details</title>
+                <title>ClothLopp | services Details</title>
             </Helmet>
             <h2 className="text-center text-2xl font-bold">
                 {service.ServiceName}

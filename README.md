@@ -1,8 +1,8 @@
-## Project Name : Cloth Loop
+## Project Name : Cloth Loop Fashion
 
 ### Project Livelink :
 
-# Project Features:~
+## Project Features:~
 
 -   #### User Profile:
 

@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>ClothLoop Fashion</title>
+                <title>ClothLoop | Home</title>
             </Helmet>
             <div>
                 <div

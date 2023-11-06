@@ -17,6 +17,7 @@ import MySchedules from "./Components/DashBaord/MySchedules";
 import ServiceDetails from "./Components/Page/ServiceDetails";
 import PrivateRoute from "./Components/Page/PrivateRoute,";
 import ManageService from "./Components/DashBaord/ManageService";
+import UpdateService from "./Components/Page/UpdateService";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +62,14 @@ const router = createBrowserRouter([
                 element: (
                     <PrivateRoute>
                         <ServiceDetails></ServiceDetails>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "manage-services/:id",
+                element: (
+                    <PrivateRoute>
+                        <UpdateService></UpdateService>
                     </PrivateRoute>
                 ),
             },
