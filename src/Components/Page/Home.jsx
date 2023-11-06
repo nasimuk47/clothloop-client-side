@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
+import NewSellProduct from "./NewSellProduct";
+
 const Home = () => {
     useEffect(() => {
         AOS.init();
@@ -48,6 +50,7 @@ const Home = () => {
             </div>
 
             <PopolerService></PopolerService>
+            <NewSellProduct></NewSellProduct>
 
             <Footer></Footer>
         </div>

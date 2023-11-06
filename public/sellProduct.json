@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "product_img": "https://i.ibb.co/hgSGK6j/hoddie2.webp",
+      "name": "Stylish Hoodie",
+      "price": 39.99
+    },
+    {
+      "id": 2,
+      "product_img": "https://i.ibb.co/WH5sdDF/sell1.jpg",
+      "name": "Elegant Formal Dress",
+      "price": 79.99
+    },
+    {
+      "id": 3,
+      "product_img": "https://i.ibb.co/HpPJ383/sell3.jpg",
+      "name": "Classic Leather Belt",
+      "price": 24.99
+    },
+    {
+      "id": 4,
+      "product_img": "https://i.ibb.co/FmYkssh/sell4.jpg",
+      "name": "Sporty Sneakers",
+      "price": 59.99
+    }
+  ]
+  

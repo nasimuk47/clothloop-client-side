@@ -73,7 +73,7 @@ const Service = () => {
             </h1>
 
             {/* Services card section */}
-            <div className="sm:grid grid-cols-1 lg:grid-cols-4 mt-5 mb-2">
+            <div className="sm:grid grid-cols-1 space-y-3 lg:grid-cols-4 mt-5 mb-2">
                 {filteredServices.map((service) => (
                     <div
                         key={service._id}

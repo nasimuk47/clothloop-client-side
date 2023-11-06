@@ -4,21 +4,18 @@ import React from "react";
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-center p-10 bg-black text-white rounded mt-5">
-                <h1 className="text-sky-400 text-3xl font-bold ">Cloth Loop</h1>
+            <footer className="footer footer-center p-10 bg-gray-500 text-white rounded mt-5">
+                <h1 className="text-sky-500 text-3xl font-bold ">Cloth Loop</h1>
 
                 <nav className="grid grid-flow-col gap-4">
                     <a href="/" className="link link-hover">
                         Home
                     </a>
-                    <a href="/AddProduct" className="link link-hover">
-                        AddProduct
+                    <a href="/service" className="link link-hover">
+                        service
                     </a>
                     <a href="/Login" className="link link-hover">
                         Login
-                    </a>
-                    <a href="/MyCart" className="link link-hover">
-                        MyCart
                     </a>
                 </nav>
                 <nav>
@@ -57,7 +54,7 @@ const Footer = () => {
                 </nav>
                 <aside>
                     <p>
-                        Copyright © 2023 - All right reserved by DriverZen
+                        Copyright © 2023 - All right reserved by ClothLoop
                         Industries Ltd
                     </p>
                 </aside>

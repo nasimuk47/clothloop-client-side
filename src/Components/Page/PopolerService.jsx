@@ -57,10 +57,12 @@ const PopolerService = () => {
                 ))}
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex justify-center mb-4 ">
                 <Link to="/service">
                     {" "}
-                    <button className="btn btn-primary  mt-5">Show All</button>
+                    <button className="btn btn-sm btn-info  mt-5 ">
+                        Show All
+                    </button>
                 </Link>
             </div>
         </div>
