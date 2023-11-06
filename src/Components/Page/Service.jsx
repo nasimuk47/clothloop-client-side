@@ -98,14 +98,7 @@ const Service = () => {
                                       )
                                     : ""}
                             </p>
-                            <p>
-                                {service.ServiceDescription
-                                    ? service.ServiceDescription.substring(
-                                          0,
-                                          100
-                                      )
-                                    : ""}
-                            </p>
+
                             <div className="flex items-center gap-1 justify-center">
                                 <img
                                     src={service.ServiceProviderImage}

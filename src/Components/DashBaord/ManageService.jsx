@@ -2,12 +2,56 @@ import { Helmet } from "react-helmet";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
+import Swal from "sweetalert2";
 
 const ManageService = () => {
     const [bookings, setBookings] = useState([]);
     const navigate = useNavigate();
 
     const { user } = useContext(AuthContext);
+
+    const handleDelete = (id) => {
+        Swal.fire({
+            title: "Delete Service",
+            text: "Are you sure you want to delete this service?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // User confirmed to delete
+                fetch(`http://localhost:5000/bookings/${id}`, {
+                    method: "DELETE",
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                "Deleted!",
+                                "Service deleted successfully",
+                                "success"
+                            );
+
+                            setBookings((prevBookings) =>
+                                prevBookings.filter(
+                                    (booking) => booking._id !== id
+                                )
+                            );
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error deleting service:", error);
+                        Swal.fire(
+                            "Error",
+                            "An error occurred while deleting the service",
+                            "error"
+                        );
+                    });
+            }
+        });
+    };
 
     useEffect(() => {
         if (user) {
@@ -65,7 +109,11 @@ const ManageService = () => {
                                         }>
                                         Edit
                                     </button>
-                                    <button className="btn btn-neutral ">
+                                    <button
+                                        onClick={() =>
+                                            handleDelete(booking._id)
+                                        }
+                                        className="btn btn-neutral ">
                                         Delete
                                     </button>
                                 </div>

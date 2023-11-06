@@ -32,7 +32,6 @@ const ServiceDetails = () => {
         console.log("Special instruction:", specialInstruction);
 
         const bookingData = {
-            serviceId: id,
             serviceTakingDate,
             specialInstruction,
             userEmail: user.email,
