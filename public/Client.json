@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "ClientImg": "https://i.ibb.co/Jv9wJsj/p4.jpg",
+      "ClientName": "Trendy Hoodie",
+      "description": "Stay warm and stylish with this trendy hoodie."
+    },
+    {
+      "id": 2,
+      "ClientImg": "https://i.ibb.co/tsSzYWd/c1.jpg",
+      "ClientName": "Elegant Dress",
+      "description": "Elevate your fashion game with this stunning outfit."
+    },
+    {
+      "id": 3,
+      "ClientImg": "https://i.ibb.co/7bjgkTm/c2.jpg",
+      "ClientName": "Formal Suit",
+      "description": "Perfect for any formal occasion, you'll stand out in this attire."
+    },
+    {
+      "id": 4,
+      "ClientImg": "https://i.ibb.co/n6157cQ/c4.jpg",
+      "ClientName": "Fashionable Gown",
+      "description": "The ultimate fashion statement for your next event."
+    }
+  ]
+  

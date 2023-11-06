@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import NewSellProduct from "./NewSellProduct";
+import Client from "./Client ";
 
 const Home = () => {
     useEffect(() => {
@@ -51,6 +52,7 @@ const Home = () => {
 
             <PopolerService></PopolerService>
             <NewSellProduct></NewSellProduct>
+            <Client></Client>
 
             <Footer></Footer>
         </div>
