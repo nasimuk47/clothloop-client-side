@@ -1,0 +1,8 @@
+/* NewSellProduct.css */
+.product-card {
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}

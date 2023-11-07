@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
+import "../Page/NewSellProduct.css"; // Import a CSS file for styling
 
 const NewSellProduct = () => {
     const [products, setProducts] = useState([]);
@@ -26,7 +27,7 @@ const NewSellProduct = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
                 {products.map((product) => (
-                    <div key={product.id} className="card">
+                    <div key={product.id} className="card product-card">
                         <figure>
                             <img
                                 className="w-[200px]"

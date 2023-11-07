@@ -8,7 +8,7 @@ const ManageService = () => {
     const [bookings, setBookings] = useState([]);
     const navigate = useNavigate();
 
-    const { user } = useContext(AuthContext);
+    const { user, token } = useContext(AuthContext); // Assuming you have a user and token from your AuthContext
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -24,6 +24,9 @@ const ManageService = () => {
                 // User confirmed to delete
                 fetch(`http://localhost:5000/bookings/${id}`, {
                     method: "DELETE",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
                 })
                     .then((res) => res.json())
                     .then((data) => {
@@ -55,7 +58,11 @@ const ManageService = () => {
 
     useEffect(() => {
         if (user) {
-            fetch("http://localhost:5000/bookings")
+            fetch("http://localhost:5000/bookings", {
+                headers: {
+                    Authorization: `Bearer ${token}`, // Include the JWT token in the request header
+                },
+            })
                 .then((response) => response.json())
                 .then((data) => {
                     const filteredBookings = data.filter(
@@ -67,7 +74,7 @@ const ManageService = () => {
                     console.error("Error fetching data:", error);
                 });
         }
-    }, [user]);
+    }, [user, token]);
 
     function handleUpdateClick(bookingId) {
         navigate(`/manage-services/${bookingId}`);
