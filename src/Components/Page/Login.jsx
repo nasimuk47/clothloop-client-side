@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../Auth/AuthProvider";
+import Lottie from "lottie-react";
+import loginAnimation from "../../assets/login-animation.json";
+
 import { Helmet } from "react-helmet";
 
 const Login = () => {
@@ -49,12 +52,14 @@ const Login = () => {
             <Helmet>
                 <title>ClothLoop | Login</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col">
-                    <div className="text-center">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                    </div>
+            <div className="hero min-h-screen bg-base-200 flex">
+                <div className="hero-content flex space-x-24">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <div className="text-center">
+                            <h1 className="text-4xl font-bold mt-4">
+                                Login now!
+                            </h1>
+                        </div>
                         <div className="card-body">
                             <form onSubmit={handleLogin}>
                                 <div className="form-control">
@@ -113,6 +118,7 @@ const Login = () => {
                             </p>
                         </div>
                     </div>
+                    <Lottie animationData={loginAnimation} autoPlay loop />
                 </div>
                 <ToastContainer position="bottom-left" />
             </div>

@@ -22,7 +22,7 @@ const Home = () => {
             </Helmet>
             <div>
                 <div
-                    className="hero h-[560px] relative"
+                    className="hero h-[570px] relative"
                     style={{
                         backgroundImage:
                             "url(https://i.ibb.co/HnJCKBg/banner2.jpg)",
@@ -52,6 +52,7 @@ const Home = () => {
 
             <PopolerService></PopolerService>
             <NewSellProduct></NewSellProduct>
+
             <Client></Client>
 
             <Footer></Footer>

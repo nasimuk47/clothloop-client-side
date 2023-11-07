@@ -59,7 +59,6 @@ const Client = () => {
                                             name="rating-2"
                                             className="mask mask-star-2 bg-orange-400"
                                         />
-                                        {/* Add the appropriate number of stars based on the client's rating */}
                                     </div>
                                 </div>
                                 <p>{client.description}</p>

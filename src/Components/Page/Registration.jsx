@@ -6,6 +6,8 @@ import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.css";
 import { AuthContext } from "../Auth/AuthProvider";
 import { Helmet } from "react-helmet";
+import Lottie from "lottie-react";
+import loginAnimation from "../../assets/login-animation.json";
 
 const Registration = () => {
     const { createUser, signInUser, signInWithGoogle } =
@@ -97,7 +99,7 @@ const Registration = () => {
                 <title>ClothLoop | Registration</title>
             </Helmet>
             <div className="mt-16">
-                <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="hero-content flex gap-5 lg:flex-row-reverse">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleRegister} className="card-body">
                             <div className="form-control">
@@ -176,6 +178,7 @@ const Registration = () => {
                             Login Now
                         </Link>
                     </div>
+                    <Lottie animationData={loginAnimation} autoPlay loop />
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ const NewSellProduct = () => {
     }, []);
 
     return (
-        <div className="bg-gray-200 h-[450px] p-8">
+        <div className="bg-gray-200 p-8">
             <div className="mt-4">
                 <h2 className="text-3xl font-serif text-center">
                     New Sell Products
