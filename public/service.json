@@ -8,6 +8,8 @@
         "ServiceProviderImage": "https://i.ibb.co/gF6Y9Rd/c1.jpg",
         "ServiceProviderName": "John Blinken",
         "ServiceArea": "Downtown",
+        
+        "seller":"abc@gmail.com",
         "ServicePrice": 19.99
       },
       {
@@ -17,6 +19,8 @@
         "ServiceProviderImage": "https://i.ibb.co/vLKj5gV/c2.jpg",
         "ServiceProviderName": "Almighty Netro",
         "ServiceArea": "Suburbs",
+
+        "seller":"abc@gmail.com",
         "ServicePrice": 15.50
       },
       {
@@ -26,6 +30,7 @@
         "ServiceProviderImage": "https://i.ibb.co/nChKhzc/c3.jpg",
         "ServiceProviderName": "Mixisa Nistu",
         "ServiceArea": "Citywide",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 49.99
       },
       {
@@ -35,6 +40,7 @@
         "ServiceProviderImage": "https://i.ibb.co/VLk5scy/c4.jpg",
         "ServiceProviderName": "Delini Soss",
         "ServiceArea": "Local",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 30.00
       },
       {
@@ -44,6 +50,7 @@
         "ServiceProviderImage": "https://i.ibb.co/tLB7YST/c5.jpg",
         "ServiceProviderName": "Akssher Lek",
         "ServiceArea": "Rural",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 45.75
       },
       {
@@ -53,6 +60,7 @@
         "ServiceProviderImage": "https://i.ibb.co/ScCCZv7/c6.jpg",
         "ServiceProviderName": "ColorSplash Painters",
         "ServiceArea": "Suburbs",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 99.00
       },
       {
@@ -62,6 +70,7 @@
         "ServiceProviderImage": "https://i.ibb.co/bRfGdG8/c7.jpg",
         "ServiceProviderName": "QuickFix Printing",
         "ServiceArea": "Countywide",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 19.99
       },
       {
@@ -71,6 +80,7 @@
         "ServiceProviderImage": "https://i.ibb.co/PjkXt1N/c8.jpg",
         "ServiceProviderName": "AppGenius Solutions",
         "ServiceArea": "Global",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 199.99
       },
       {
@@ -80,6 +90,7 @@
         "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
         "ServiceProviderName": "TasteBuds Catering",
         "ServiceArea": "Citywide",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 120.50
       },
       {
@@ -90,6 +101,7 @@
         "ServiceProviderImage": "https://i.ibb.co/Hq7pvS5/c10.jpg",
         "ServiceProviderName": "ElectroFix Services",
         "ServiceArea": "Local",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 55.25
       },
       {
@@ -100,6 +112,7 @@
         "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
         "ServiceProviderName": "Serenity Spa",
         "ServiceArea": "Downtown",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 75.00
       },
       {
@@ -110,6 +123,7 @@
         "ServiceProviderImage": "https://i.ibb.co/Qc6sbqZ/c13.jpg",
         "ServiceProviderName": "AutoCare Solutions",
         "ServiceArea": "City Center",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 85.99
       },
       {
@@ -120,6 +134,7 @@
         "ServiceProviderImage": "https://i.ibb.co/93h2ZMT/c15.jpg",
         "ServiceProviderName": "Zen Harmony Yoga",
         "ServiceArea": "Suburbs",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 20.00
       },
       {
@@ -130,6 +145,7 @@
         "ServiceProviderImage": "https://i.ibb.co/zZwtPz4/c18.jpg",
         "ServiceProviderName": "RenovateRight Contractors",
         "ServiceArea": "Local",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 150.00
       },
       {
@@ -140,6 +156,7 @@
         "ServiceProviderImage": "https://i.ibb.co/PjkXt1N/c8.jpg",
         "ServiceProviderName": "CaptureMoments Photography",
         "ServiceArea": "Countywide",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 80.00
       },
       {
@@ -150,6 +167,7 @@
         "ServiceProviderImage": "https://i.ibb.co/gF6Y9Rd/c1.jpg",
         "ServiceProviderName": "FitLife Trainers",
         "ServiceArea": "Citywide",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 40.50
       },
       {
@@ -160,6 +178,7 @@
         "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
         "ServiceProviderName": "Craftsmen Carpentry",
         "ServiceArea": "Rural",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 60.00
       },
       {
@@ -170,6 +189,7 @@
         "ServiceProviderImage": "https://i.ibb.co/zZwtPz4/c18.jpg",
         "ServiceProviderName": "Dream Events Planners",
         "ServiceArea": "Suburbs",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 90.00
       },
       {
@@ -180,6 +200,7 @@
         "ServiceProviderImage": "https://i.ibb.co/7ttyrbZ/shirt24.jpg",
         "ServiceProviderName": "DesignCraft Studios",
         "ServiceArea": "City Center",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 55.00
       },
       {
@@ -190,6 +211,7 @@
         "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
         "ServiceProviderName": "LegalEase Advisors",
         "ServiceArea": "Downtown",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 120.00
       },
       {
@@ -200,6 +222,7 @@
         "ServiceProviderImage": "https://i.ibb.co/zZwtPz4/c18.jpg",
         "ServiceProviderName": "Elegance Interiors",
         "ServiceArea": "Local",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 75.00
       },
       {
@@ -210,6 +233,7 @@
         "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
         "ServiceProviderName": "TasteBuds Catering",
         "ServiceArea": "Citywide",
+        "seller":"nasim.uk47@gmail.com",
         "ServicePrice": 120.50
       },
       {
@@ -220,6 +244,7 @@
         "ServiceProviderImage": "https://i.ibb.co/Hq7pvS5/c10.jpg",
         "ServiceProviderName": "ElectroFix Services",
         "ServiceArea": "Local",
+        "seller":"abc@gmail.com",
         "ServicePrice": 55.25
       },
       {
@@ -230,6 +255,7 @@
         "ServiceProviderImage": "https://i.ibb.co/93h2ZMT/c15.jpg",
         "ServiceProviderName": "Serenity Spa",
         "ServiceArea": "Downtown",
+        "seller":"abc@gmail.com",
         "ServicePrice": 75.00
        },
        {
@@ -241,6 +267,7 @@
       "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
       "ServiceProviderName": "AutoCare Solutions",
       "ServiceArea": "City Center",
+      "seller":"abc@gmail.com",
       "ServicePrice": 85.99
      },
     {
@@ -252,6 +279,7 @@
       "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
       "ServiceProviderName": "Zen Harmony Yoga",
       "ServiceArea": "Suburbs",
+      "seller":"abc@gmail.com",
       "ServicePrice": 20.00
     },
     {
@@ -263,6 +291,7 @@
       "ServiceProviderImage": "https://i.ibb.co/pht72z7/c9.jpg",
       "ServiceProviderName": "RenovateRight Contractors",
       "ServiceArea": "Local",
+      "seller":"abc@gmail.com",
       "ServicePrice": 150.00
     },
     {
@@ -274,6 +303,7 @@
       "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
       "ServiceProviderName": "CaptureMoments Photography",
       "ServiceArea": "Countywide",
+      "seller":"abc@gmail.com",
       "ServicePrice": 80.00
     },
     {
@@ -285,6 +315,7 @@
       "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
       "ServiceProviderName": "FitLife Trainers",
       "ServiceArea": "Citywide",
+      "seller":"abc@gmail.com",
       "ServicePrice": 40.50
     },
     {
@@ -296,6 +327,7 @@
       "ServiceProviderImage": "https://i.ibb.co/GQ3tXhc/c11.jpg",
       "ServiceProviderName": "Craftsmen Carpentry",
       "ServiceArea": "Rural",
+      "seller":"abc@gmail.com",
       "ServicePrice": 60.00
     }
   ]

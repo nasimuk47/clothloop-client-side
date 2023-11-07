@@ -28,13 +28,17 @@ const ServiceDetails = () => {
     };
 
     const handlePurchaseService = () => {
-        console.log("Service taking date:", serviceTakingDate);
-        console.log("Special instruction:", specialInstruction);
+        console.log(serviceTakingDate);
+        console.log(specialInstruction);
+
+        const status = "pending";
 
         const bookingData = {
             serviceTakingDate,
             specialInstruction,
-            userEmail: user.email,
+            userEmail: user?.email,
+            saller: service?.seller,
+            status,
             servicePrice: service.ServicePrice,
             serviceImage: service.ServiceImage,
             serviceName: service.ServiceName,
@@ -49,7 +53,7 @@ const ServiceDetails = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log("Booking response:", data);
+                console.log(data);
                 closeModal();
 
                 if (data.acknowledged) {
@@ -83,7 +87,7 @@ const ServiceDetails = () => {
                 setService(data);
             })
             .catch((error) => {
-                console.error("Error fetching service details:", error);
+                console.error(error);
             });
     }, [id]);
 
@@ -112,6 +116,7 @@ const ServiceDetails = () => {
                             alt={service.ServiceName}
                         />
                     </figure>
+
                     <div className="space-y-2">
                         <h2 className="text-2xl text-center">
                             {service.ServiceName}

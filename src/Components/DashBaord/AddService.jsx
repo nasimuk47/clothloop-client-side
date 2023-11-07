@@ -17,6 +17,8 @@ const AddService = () => {
         const ServiceName = form.serviceName.value;
         const ServiceProviderName = user?.displayName;
         const Email = user?.email;
+
+        const seller = user?.email;
         const ServicePrice = form.price.value;
         const ServiceArea = form.serviceArea.value;
         const ServiceDescription = form.description.value;
@@ -27,6 +29,7 @@ const AddService = () => {
             ServiceName,
             ServiceProviderName,
             Email,
+            seller,
             ServicePrice,
             ServiceArea,
             ServiceDescription,

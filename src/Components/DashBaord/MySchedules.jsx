@@ -27,7 +27,7 @@ const MySchedules = () => {
             });
     }, [user.email]);
     return (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-5">
             <Helmet>
                 <title>ClothLopp MySchedules</title>
             </Helmet>
@@ -39,16 +39,16 @@ const MySchedules = () => {
             )}
             {error && <p>{error}</p>}
 
-            <div className="grid grid-cols-1 gap-2 flex[1] ">
+            <div className="grid grid-cols-1 gap-2  space-x-20 ">
                 {bookings.map((booking) => (
                     <div
                         key={booking._id}
-                        className="card card-side bg-base-100 shadow-xl">
+                        className="card card-side bg-base-100 h-[290px] shadow-xl">
                         {/* Render booking details */}
                         <figure>
                             <img src={booking.serviceImage} alt="Service" />
                         </figure>
-                        <div className="card-body">
+                        <div className="card-body bg-slate-100">
                             <h2 className="card-title">
                                 {booking.serviceName}
                             </h2>
@@ -65,13 +65,55 @@ const MySchedules = () => {
                                 Special Instructions:{" "}
                                 {booking.specialInstruction}
                             </p>
+
+                            <p className="font-bold">status:{booking.status}</p>
+
+                            <div>
+                                <div className="dropdown  dropdown-right">
+                                    <label
+                                        tabIndex={0}
+                                        className="btn btn-secondary">
+                                        Change Status
+                                    </label>
+                                    <ul
+                                        tabIndex={0}
+                                        className="dropdown-content z-[1] menu p-2 shadow bg-sky-300 rounded-box w-52">
+                                        <li>
+                                            <a>In Progress</a>
+                                        </li>
+                                        <li>
+                                            <a>Completed</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="flex[1] bg-green-600 text-center">
-                pending works
+            <div className=" h-[140px]">
+                <div className="card card-side ">
+                    <figure>
+                        <img
+                            className="h-[130px] w-[150px]"
+                            src="https://i.ibb.co/vY7DHPv/panjabi26.jpg"
+                            alt="Movie"
+                        />
+                    </figure>
+                    <div className="flex items-center space-x-10 bg-blue-200 w-[400px]  rounded-r-lg">
+                        <div>
+                            <h2 className="card-title ml-5">Service name</h2>
+                        </div>
+                        <div>
+                            <p>price:</p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-xl font-bold">Status:</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
