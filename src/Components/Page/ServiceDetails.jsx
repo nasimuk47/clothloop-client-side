@@ -40,7 +40,7 @@ const ServiceDetails = () => {
             serviceName: service.ServiceName,
         };
 
-        fetch("http://localhost:5000/bookings", {
+        fetch("https://cloth-loop-server-site.vercel.app/bookings", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -77,7 +77,7 @@ const ServiceDetails = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://cloth-loop-server-site.vercel.app/services/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setService(data);
@@ -88,7 +88,11 @@ const ServiceDetails = () => {
     }, [id]);
 
     if (!service) {
-        return <div>No service details found.</div>;
+        return (
+            <div>
+                <span className="loading loading-infinity loading-lg"></span>
+            </div>
+        );
     }
 
     return (

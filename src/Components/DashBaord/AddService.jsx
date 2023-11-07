@@ -37,13 +37,16 @@ const AddService = () => {
         console.log(newService);
 
         try {
-            const response = await fetch("http://localhost:5000/services", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newService),
-            });
+            const response = await fetch(
+                "https://cloth-loop-server-site.vercel.app/services",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(newService),
+                }
+            );
 
             const data = await response.json();
             console.log(data);
@@ -94,14 +97,17 @@ const AddService = () => {
                         <input
                             type="text"
                             placeholder="Your name"
-                            value={user.displayName} // Populate with user's name
+                            value={user.displayName}
+                            readOnly
                             className="input input-bordered input-primary max-w-xs w-full sm:w-1/2"
                         />
+
                         <input
                             type="email"
                             placeholder="Your email"
                             name="yourEmail"
-                            value={user.email} // Populate with user's email
+                            value={user.email}
+                            readOnly
                             className="input input-bordered input-primary w-full sm:w-1/2"
                         />
                     </div>

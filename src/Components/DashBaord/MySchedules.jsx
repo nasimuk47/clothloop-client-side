@@ -12,7 +12,7 @@ const MySchedules = () => {
 
     useEffect(() => {
         // Fetch data from the API
-        fetch("http://localhost:5000/bookings")
+        fetch("https://cloth-loop-server-site.vercel.app/bookings")
             .then((response) => response.json())
             .then((data) => {
                 const userBookings = data.filter(
@@ -27,15 +27,19 @@ const MySchedules = () => {
             });
     }, [user.email]);
     return (
-        <div>
+        <div className="grid grid-cols-2">
             <Helmet>
                 <title>ClothLopp MySchedules</title>
             </Helmet>
 
-            {loading && <p>Loading...</p>}
+            {loading && (
+                <p>
+                    <span className="loading loading-infinity loading-lg"></span>
+                </p>
+            )}
             {error && <p>{error}</p>}
 
-            <div className="sm:grid grid-cols-1  lg:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 gap-2 flex[1] ">
                 {bookings.map((booking) => (
                     <div
                         key={booking._id}
@@ -64,6 +68,10 @@ const MySchedules = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="flex[1] bg-green-600 text-center">
+                pending works
             </div>
         </div>
     );

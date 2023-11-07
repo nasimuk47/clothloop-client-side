@@ -22,12 +22,15 @@ const ManageService = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // User confirmed to delete
-                fetch(`http://localhost:5000/bookings/${id}`, {
-                    method: "DELETE",
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                })
+                fetch(
+                    `https://cloth-loop-server-site.vercel.app/bookings/${id}`,
+                    {
+                        method: "DELETE",
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                )
                     .then((res) => res.json())
                     .then((data) => {
                         if (data.deletedCount > 0) {
@@ -58,7 +61,7 @@ const ManageService = () => {
 
     useEffect(() => {
         if (user) {
-            fetch("http://localhost:5000/bookings", {
+            fetch("https://cloth-loop-server-site.vercel.app/bookings", {
                 headers: {
                     Authorization: `Bearer ${token}`, // Include the JWT token in the request header
                 },

@@ -9,7 +9,7 @@ const UnderDetailsDervicesCollection = () => {
 
     useEffect(() => {
         // Fetch the service data from your server
-        fetch("http://localhost:5000/services")
+        fetch("https://cloth-loop-server-site.vercel.app/services")
             .then((response) => response.json())
             .then((data) => {
                 setServices(data);

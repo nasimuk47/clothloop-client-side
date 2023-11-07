@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import ServiceDetails from "../Page/ServiceDetails";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 
 const Service = () => {
     const [services, setServices] = useState([]);
@@ -11,7 +12,7 @@ const Service = () => {
 
     useEffect(() => {
         // Fetch the service data from your server
-        fetch("http://localhost:5000/services")
+        fetch("https://cloth-loop-server-site.vercel.app/services")
             .then((response) => response.json())
             .then((data) => {
                 setServices(data);
@@ -75,57 +76,62 @@ const Service = () => {
             {/* Services card section */}
             <div className="sm:grid grid-cols-1 space-y-3 lg:grid-cols-4 mt-5 mb-2">
                 {filteredServices.map((service) => (
-                    <div
+                    <motion.div
                         key={service._id}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
                         className="w-72 h-[530px] bg-slate-200">
-                        <figure>
-                            <img
-                                src={service.ServiceImage}
-                                alt={service.ServiceName}
-                                className="w-full h-[280px]"
-                            />
-                        </figure>
-                        <div className="items-center space-y-2 bg-gray-200 text-center h-[210px]">
-                            <h2 className="text-center font-serif">
-                                {service.ServiceName}
-                            </h2>
-
-                            <p>
-                                {service.ServiceDescription
-                                    ? service.ServiceDescription.substring(
-                                          0,
-                                          100
-                                      )
-                                    : ""}
-                            </p>
-
-                            <div className="flex items-center gap-1 justify-center">
+                        <div className="w-72 h-[530px] bg-slate-200">
+                            <figure>
                                 <img
-                                    src={service.ServiceProviderImage}
-                                    alt={service.ServiceProviderName}
-                                    className="w-8 h-8 rounded-full"
+                                    src={service.ServiceImage}
+                                    alt={service.ServiceName}
+                                    className="w-full h-[280px]"
                                 />
-                                <p className="font-semibold">
-                                    {service.ServiceProviderName}
-                                </p>
-                            </div>
+                            </figure>
+                            <div className="items-center space-y-2 bg-gray-200 text-center h-[210px]">
+                                <h2 className="text-center font-serif">
+                                    {service.ServiceName}
+                                </h2>
 
-                            <p className="font-sans">
-                                {" "}
-                                Area:{service.ServiceArea}
-                            </p>
-                            <p className="font-sans text-blue-600">
-                                Price: ${service.ServicePrice}
-                            </p>
-                            <div className="text-center">
-                                <Link to={`/serviceDetails/${service._id}`}>
-                                    <button className="btn btn-xs bg-slate-300 mb-1">
-                                        Details
-                                    </button>
-                                </Link>
+                                <p>
+                                    {service.ServiceDescription
+                                        ? service.ServiceDescription.substring(
+                                              0,
+                                              100
+                                          )
+                                        : ""}
+                                </p>
+
+                                <div className="flex items-center gap-1 justify-center">
+                                    <img
+                                        src={service.ServiceProviderImage}
+                                        alt={service.ServiceProviderName}
+                                        className="w-8 h-8 rounded-full"
+                                    />
+                                    <p className="font-semibold">
+                                        {service.ServiceProviderName}
+                                    </p>
+                                </div>
+
+                                <p className="font-sans">
+                                    {" "}
+                                    Area: {service.ServiceArea}
+                                </p>
+                                <p className="font-sans text-blue-600">
+                                    Price: ${service.ServicePrice}
+                                </p>
+                                <div className="text-center">
+                                    <Link to={`/serviceDetails/${service._id}`}>
+                                        <button className="btn btn-xs bg-slate-300 mb-1">
+                                            Details
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 

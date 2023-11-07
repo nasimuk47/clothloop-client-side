@@ -19,7 +19,10 @@ const UpdateService = () => {
             body: JSON.stringify(serviceData),
         };
 
-        fetch(`http://localhost:5000/bookings/${id}`, requestOptions)
+        fetch(
+            `https://cloth-loop-server-site.vercel.app/bookings/${id}`,
+            requestOptions
+        )
             .then((response) => {
                 if (response.ok) {
                     return response.json();
