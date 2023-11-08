@@ -44,7 +44,7 @@ const Navber = () => {
                                     Dashboard
                                 </a>
                                 {showDashboardMenu && (
-                                    <ul className="bg-purple-300 rounded right-[400px]  -mt-16 p-2  absolute">
+                                    <ul className="bg-sky-300 rounded mt-4 z-40   absolute">
                                         <li>
                                             <NavLink
                                                 to="/add-services"
