@@ -20,7 +20,7 @@ const Client = () => {
                     <span className="font-extrabold text-red-400"> Say</span>
                 </h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-16 w-11/12 mx-auto ">
+                <div className="grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 mt-16 w-11/12 mx-auto ">
                     {clients.map((client) => (
                         <div
                             key={client.id}

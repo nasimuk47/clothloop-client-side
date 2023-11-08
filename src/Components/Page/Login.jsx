@@ -53,7 +53,7 @@ const Login = () => {
                 <title>ClothLoop | Login</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200 flex">
-                <div className="hero-content flex space-x-24">
+                <div className="hero-content flex-col lg:flex-row ">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="text-center">
                             <h1 className="text-4xl font-bold mt-4">

@@ -20,7 +20,7 @@ const PopolerService = () => {
             <h2 className="text-center text-4xl font-bold mt-5 text-gray-700">
                 Popular Services
             </h2>
-            <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4  mt-5">
+            <div className="grid grid-cols-2  gap-4 mt-5">
                 {popularServices.map((service, index) => (
                     <div
                         key={index}
