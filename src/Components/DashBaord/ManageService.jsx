@@ -105,7 +105,7 @@ const ManageService = () => {
                             <p>
                                 Service Taking Date: {booking.serviceTakingDate}
                             </p>
-                            <p>User Email: {booking.userEmail}</p>
+                            <p>saller Email: {booking.saller}</p>
                             <p>
                                 Special Instructions:{" "}
                                 {booking.specialInstruction}

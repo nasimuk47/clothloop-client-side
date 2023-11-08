@@ -5,7 +5,7 @@ import Navber from "../Header/Navber";
 
 const MainLayout = () => {
     return (
-        <div className=" lg:w-[1230px] mx-auto p-4">
+        <div className="w-[1200px] mx-auto p-4">
             <Navber />
             <div className="">
                 <Outlet />

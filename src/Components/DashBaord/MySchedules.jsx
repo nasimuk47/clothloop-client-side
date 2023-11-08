@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../Auth/AuthProvider";
+import Swal from "sweetalert2"; // Import SweetAlert
 
 const MySchedules = () => {
     const [bookings, setBookings] = useState([]);
@@ -11,12 +12,11 @@ const MySchedules = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        // Fetch data from the API
         fetch("https://cloth-loop-server-site.vercel.app/bookings")
             .then((response) => response.json())
             .then((data) => {
                 const userBookings = data.filter(
-                    (booking) => booking.userEmail === user.email
+                    (booking) => booking.userEmail === user?.email
                 );
                 setBookings(userBookings);
                 setLoading(false);
@@ -26,6 +26,40 @@ const MySchedules = () => {
                 setLoading(false);
             });
     }, [user.email]);
+
+    const handleStatusChange = (newStatus, bookingId) => {
+        const updatedBookings = bookings.map((booking) => {
+            if (booking._id === bookingId) {
+                return { ...booking, status: newStatus };
+            }
+            return booking;
+        });
+        setBookings(updatedBookings);
+
+        fetch(`http://localhost:5000/bookings/${bookingId}/status`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ status: newStatus }),
+        })
+            .then((response) => {
+                if (response.status === 200) {
+                    Swal.fire({
+                        title: "Success",
+                        text: "Status updated successfully",
+                        icon: "success",
+                    });
+                    console.log(`Status updated for booking ID: ${bookingId}`);
+                } else {
+                    console.error("Failed to update status");
+                }
+            })
+            .catch((error) => {
+                console.error("Error updating status:", error);
+            });
+    };
+
     return (
         <div className="grid grid-cols-2 gap-5">
             <Helmet>
@@ -39,11 +73,11 @@ const MySchedules = () => {
             )}
             {error && <p>{error}</p>}
 
-            <div className="grid grid-cols-1 gap-2  space-x-20 ">
+            <div className="grid grid-cols-1 gap-2   ">
                 {bookings.map((booking) => (
                     <div
                         key={booking._id}
-                        className="card card-side bg-base-100 h-[290px] shadow-xl">
+                        className="card card-side bg-base-100  shadow-xl">
                         {/* Render booking details */}
                         <figure>
                             <img src={booking.serviceImage} alt="Service" />
@@ -65,55 +99,82 @@ const MySchedules = () => {
                                 Special Instructions:{" "}
                                 {booking.specialInstruction}
                             </p>
-
-                            <p className="font-bold">status:{booking.status}</p>
-
-                            <div>
-                                <div className="dropdown  dropdown-right">
-                                    <label
-                                        tabIndex={0}
-                                        className="btn btn-secondary">
-                                        Change Status
-                                    </label>
-                                    <ul
-                                        tabIndex={0}
-                                        className="dropdown-content z-[1] menu p-2 shadow bg-sky-300 rounded-box w-52">
-                                        <li>
-                                            <a>In Progress</a>
-                                        </li>
-                                        <li>
-                                            <a>Completed</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className=" h-[140px]">
-                <div className="card card-side ">
-                    <figure>
-                        <img
-                            className="h-[130px] w-[150px]"
-                            src="https://i.ibb.co/vY7DHPv/panjabi26.jpg"
-                            alt="Movie"
-                        />
-                    </figure>
-                    <div className="flex items-center space-x-10 bg-blue-200 w-[400px]  rounded-r-lg">
-                        <div>
-                            <h2 className="card-title ml-5">Service name</h2>
-                        </div>
-                        <div>
-                            <p>price:</p>
-                        </div>
+            <div className="h-[140px] space-y-5">
+                {bookings.map((booking) => (
+                    <div key={booking._id} className="card card-side">
+                        <figure>
+                            <img
+                                className="h-[130px] w-[150px]"
+                                src={booking.serviceImage}
+                                alt={booking.serviceName}
+                            />
+                        </figure>
+                        <div className="flex items-center space-x-10 bg-blue-200 w-[350px] rounded-r-lg">
+                            <div>
+                                <h2 className="card-title ml-5">
+                                    {booking.serviceName}
+                                </h2>
+                            </div>
+                            <div>
+                                <p>Price: {booking.servicePrice}</p>
+                            </div>
 
-                        <div>
-                            <h2 className="text-xl font-bold">Status:</h2>
+                            <div>
+                                <div>
+                                    <div className="dropdown dropdown-bottom">
+                                        <label
+                                            tabIndex={0}
+                                            className="btn btn-secondary">
+                                            STATUS:{booking.status}
+                                        </label>
+                                        <ul
+                                            tabIndex={0}
+                                            className="dropdown-content z-[1] menu p-2 shadow bg-sky-300 rounded-box w-52">
+                                            <li>
+                                                <a
+                                                    onClick={() =>
+                                                        handleStatusChange(
+                                                            "Pending",
+                                                            booking._id
+                                                        )
+                                                    }>
+                                                    Pending
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    onClick={() =>
+                                                        handleStatusChange(
+                                                            "In Progress",
+                                                            booking._id
+                                                        )
+                                                    }>
+                                                    In Progress
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    onClick={() =>
+                                                        handleStatusChange(
+                                                            "Completed",
+                                                            booking._id
+                                                        )
+                                                    }>
+                                                    Completed
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     );

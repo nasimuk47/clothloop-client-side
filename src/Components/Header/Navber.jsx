@@ -47,13 +47,6 @@ const Navber = () => {
                                     <ul className="bg-purple-300 rounded right-[400px]  -mt-16 p-2  absolute">
                                         <li>
                                             <NavLink
-                                                to="/manage-services"
-                                                activeClassName="text-red-500 underline">
-                                                Manage-services
-                                            </NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink
                                                 to="/add-services"
                                                 activeClassName="text-red-500 underline">
                                                 Add-services
@@ -64,6 +57,13 @@ const Navber = () => {
                                                 to="/my-schedules"
                                                 activeClassName="btn btn-primary">
                                                 My-schedules
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink
+                                                to="/manage-services"
+                                                activeClassName="text-red-500 underline">
+                                                Manage-services
                                             </NavLink>
                                         </li>
                                     </ul>
