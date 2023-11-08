@@ -21,20 +21,19 @@ const MySchedules = () => {
                     (booking) => booking?.userEmail === user?.email
                 );
                 setBookings(userBookings);
-                setLoading(false);
-            })
-            .then((data) => {
                 const pendings = data.filter(
                     (booking) => booking?.saller === user?.email
                 );
                 setPendingData(pendings);
+                console.log("pending data", PendingData);
                 setLoading(false);
             })
+
             .catch((err) => {
                 setError("Error fetching data");
                 setLoading(false);
             });
-    }, [user?.email]);
+    }, [user?.email, PendingData]);
 
     const handleStatusChange = (newStatus, bookingId) => {
         const updatedBookings = bookings.map((booking) => {
@@ -85,7 +84,10 @@ const MySchedules = () => {
             )}
             {error && <p>{error}</p>}
 
-            <div className="grid grid-cols-1 gap-2 bg-slate-100   ">
+            <div className="grid grid-cols-1 gap-2  ">
+                <h1 className="text-2xl font-bold text-center">
+                    My Bokkings Item{" "}
+                </h1>
                 {bookings.map((booking) => (
                     <div
                         key={booking._id}
@@ -116,86 +118,90 @@ const MySchedules = () => {
                 ))}
             </div>
 
-            <div className="bg-gray-200">
+            <div className="">
+                <h1 className="text-2xl font-bold text-center">
+                    Pending Item{" "}
+                </h1>
                 <div className="h-[140px]  space-y-5">
-                    {PendingData.length > 0 &&
-                        PendingData.map((pd) => (
-                            <div key={pd?._id} className="card card-side">
-                                <figure>
-                                    <img
-                                        className="h-[130px] w-[150px]"
-                                        src={pd?.serviceImage}
-                                        alt={pd?.serviceName}
-                                    />
-                                </figure>
-                                <div className="flex items-center space-x-8 bg-blue-200 w-full rounded-r-lg">
-                                    <div>
-                                        <h2 className="card-title ml-5">
-                                            {pd?.serviceName}
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className=" font-serif">
-                                            Price: {pd?.servicePrice}
-                                        </p>
-                                    </div>
+                    {PendingData?.length <= 0
+                        ? "NO pending item of pending service"
+                        : PendingData?.map((pd) => (
+                              <div key={pd?._id} className="card card-side">
+                                  <figure>
+                                      <img
+                                          className="h-[130px] w-[150px]"
+                                          src={pd?.serviceImage}
+                                          alt={pd?.serviceName}
+                                      />
+                                  </figure>
+                                  <div className="flex items-center space-x-8 bg-blue-200 w-full rounded-r-lg">
+                                      <div>
+                                          <h2 className="card-title ml-5">
+                                              {pd?.serviceName}
+                                          </h2>
+                                      </div>
+                                      <div>
+                                          <p className=" font-serif">
+                                              Price: {pd?.servicePrice}
+                                          </p>
+                                      </div>
 
-                                    <div>
-                                        <div>
-                                            <div className="dropdown dropdown-bottom">
-                                                <span className=" text-xl font-bold mr-2">
-                                                    status :
-                                                </span>
-                                                <label
-                                                    tabIndex={0}
-                                                    className="btn btn-secondary">
-                                                    {PendingData?.status}{" "}
-                                                    <AiFillCaretDown />{" "}
-                                                    {/* Use the icon component */}
-                                                </label>
-                                                <ul
-                                                    tabIndex={0}
-                                                    className="dropdown-content z-[1] menu p-2 shadow bg-sky-300 rounded-box w-52">
-                                                    <li>
-                                                        <a
-                                                            onClick={() =>
-                                                                handleStatusChange(
-                                                                    "Pending",
-                                                                    pd?._id
-                                                                )
-                                                            }>
-                                                            Pending
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            onClick={() =>
-                                                                handleStatusChange(
-                                                                    "In Progress",
-                                                                    pd?._id
-                                                                )
-                                                            }>
-                                                            In Progress
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            onClick={() =>
-                                                                handleStatusChange(
-                                                                    "Completed",
-                                                                    pd?._id
-                                                                )
-                                                            }>
-                                                            Completed
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                                      <div>
+                                          <div>
+                                              <div className="dropdown dropdown-bottom">
+                                                  <span className=" text-xl font-bold mr-2">
+                                                      status :
+                                                  </span>
+                                                  <label
+                                                      tabIndex={0}
+                                                      className="btn btn-secondary">
+                                                      {pd?.status}
+                                                      <AiFillCaretDown />{" "}
+                                                      {/* Use the icon component */}
+                                                  </label>
+                                                  <ul
+                                                      tabIndex={0}
+                                                      className="dropdown-content z-[1] menu p-2 shadow bg-sky-300 rounded-box w-52">
+                                                      <li>
+                                                          <a
+                                                              onClick={() =>
+                                                                  handleStatusChange(
+                                                                      "Pending",
+                                                                      pd?._id
+                                                                  )
+                                                              }>
+                                                              Pending
+                                                          </a>
+                                                      </li>
+                                                      <li>
+                                                          <a
+                                                              onClick={() =>
+                                                                  handleStatusChange(
+                                                                      "In Progress",
+                                                                      pd?._id
+                                                                  )
+                                                              }>
+                                                              In Progress
+                                                          </a>
+                                                      </li>
+                                                      <li>
+                                                          <a
+                                                              onClick={() =>
+                                                                  handleStatusChange(
+                                                                      "Completed",
+                                                                      pd?._id
+                                                                  )
+                                                              }>
+                                                              Completed
+                                                          </a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          ))}
                 </div>
             </div>
         </div>

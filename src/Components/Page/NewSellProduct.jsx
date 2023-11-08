@@ -25,12 +25,12 @@ const NewSellProduct = () => {
                     gathering, or a special event.
                 </h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4  mt-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5">
                 {products.map((product) => (
                     <div key={product.id} className="card product-card">
                         <figure>
                             <img
-                                className="w-[200px] "
+                                className="w-[200px]"
                                 src={product.product_img}
                                 alt={product.name}
                             />

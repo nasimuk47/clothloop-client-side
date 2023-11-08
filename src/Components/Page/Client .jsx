@@ -14,13 +14,13 @@ const Client = () => {
 
     return (
         <div>
-            <div className="mt-16  ">
+            <div className="mt-16">
                 <h1 className="text-4xl font-semibold text-center text-gray-600 ">
                     <span className="font-bold"></span> Our Clients{" "}
                     <span className="font-extrabold text-red-400"> Say</span>
                 </h1>
 
-                <div className="grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 mt-16 w-11/12 mx-auto ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-16 w-11/12 mx-auto ">
                     {clients.map((client) => (
                         <div
                             key={client.id}

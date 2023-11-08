@@ -40,11 +40,11 @@ const Navber = () => {
                             <li>
                                 <a
                                     onClick={toggleDashboardMenu}
-                                    className="cursor-pointer ">
+                                    className="cursor-pointer  ">
                                     Dashboard
                                 </a>
                                 {showDashboardMenu && (
-                                    <ul className="bg-sky-300 rounded mt-4 z-40   absolute">
+                                    <ul className="bg-sky-300 p-3 space-y-2 rounded mt-4 z-40   absolute">
                                         <li>
                                             <NavLink
                                                 to="/add-services"
